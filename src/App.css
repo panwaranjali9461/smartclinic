@@ -1,0 +1,160 @@
+/* =========================
+   SMARTCLINIC FOOTER
+========================= */
+
+.site-footer {
+  background: #111827;
+  color: white;
+}
+
+/* MAIN FOOTER */
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 65px 6% 50px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 50px;
+}
+
+/* BRAND */
+
+.footer-brand h2 {
+  margin: 0 0 15px;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.footer-brand > p {
+  max-width: 320px;
+  margin: 0 0 25px;
+
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact span {
+  color: #d1d5db;
+  font-size: 13px;
+}
+
+/* COLUMNS */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h3 {
+  margin: 0 0 20px;
+
+  color: white;
+  font-size: 15px;
+}
+
+.footer-column a {
+  margin-bottom: 12px;
+
+  color: #9ca3af;
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-small-text {
+  max-width: 210px;
+  margin-top: 5px;
+
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 20px 6%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid #374151;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-legal a {
+  color: #6b7280;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}

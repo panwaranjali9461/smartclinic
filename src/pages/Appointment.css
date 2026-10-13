@@ -1,0 +1,271 @@
+/* =========================
+   APPOINTMENT PAGE
+========================= */
+
+.appointment-page {
+  min-height: 80vh;
+  padding: 70px 20px;
+  background: #f7faff;
+}
+
+.appointment-container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.appointment-container > h1 {
+  margin: 0 0 10px;
+
+  color: #111827;
+  font-size: 42px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.appointment-container > p {
+  margin: 0 0 35px;
+
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* =========================
+   SELECTED HEALTH PACKAGE
+========================= */
+
+.selected-package-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 28px;
+  padding: 24px 26px;
+
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+}
+
+.selected-package-content {
+  flex: 1;
+}
+
+.selected-package-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.selected-package-content h2 {
+  margin: 0 0 7px;
+
+  color: #111827;
+  font-size: 23px;
+}
+
+.selected-package-content p {
+  margin: 0;
+
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.selected-package-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  white-space: nowrap;
+}
+
+.selected-package-price strong {
+  color: #1d4ed8;
+  font-size: 27px;
+}
+
+.selected-package-price span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.booking-success {
+  margin-bottom: 25px;
+  padding: 20px 22px;
+
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+}
+
+.booking-success h3 {
+  margin: 0 0 8px;
+
+  color: #166534;
+  font-size: 18px;
+}
+
+.booking-success p {
+  margin: 5px 0;
+
+  color: #166534;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   APPOINTMENT FORM
+========================= */
+
+.appointment-form {
+  padding: 35px;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: white;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   BOOK BUTTON
+========================= */
+
+.appointment-form button {
+  width: 100%;
+
+  margin-top: 8px;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.appointment-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .appointment-page {
+    padding: 50px 18px;
+  }
+
+  .appointment-container > h1 {
+    font-size: 34px;
+  }
+
+  .appointment-container > p {
+    font-size: 14px;
+  }
+
+  .appointment-form {
+    padding: 25px 20px;
+  }
+
+  .selected-package-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .selected-package-price {
+    align-items: flex-start;
+  }
+
+}

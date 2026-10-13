@@ -1,0 +1,87 @@
+.clinic-login-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #f4f8ff;
+}
+
+.clinic-login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.clinic-login-container h1 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.clinic-login-container > p {
+  margin-bottom: 30px;
+  color: #6b7280;
+}
+
+.clinic-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.clinic-login-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.clinic-login-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.clinic-login-form input {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.clinic-login-form input:focus {
+  border-color: #2563eb;
+}
+
+.clinic-login-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clinic-login-form button:hover {
+  background: #1d4ed8;
+}
+.logout-button {
+  margin-bottom: 30px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #b91c1c;
+}
