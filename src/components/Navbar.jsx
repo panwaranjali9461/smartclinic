@@ -1,37 +1,128 @@
 import { useState } from "react";
+import { NavLink, Link, useNavigate } from "react-router-dom";
+import { useClinic } from "../context/ClinicContext";
+import {
+  StethoscopeIcon,
+  TvIcon,
+  LogOutIcon,
+  LogInIcon,
+  CalendarIcon,
+  UserIcon,
+} from "./Icons";
 import "./Navbar.css";
 
 function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(
-    localStorage.getItem("clinicLoggedIn") === "true"
-  );
+  const { isLoggedIn, logout } = useClinic();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("clinicLoggedIn");
-    setIsLoggedIn(false);
-    window.location.href = "/";
+    logout();
+    setMenuOpen(false);
+    navigate("/");
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
-    <nav>
-      <h2>SmartClinic</h2>
+    <nav className="smart-nav">
+      <div className="nav-container">
+        {/* BRAND LOGO */}
+        <Link to="/" className="brand-logo" onClick={closeMenu}>
+          <div className="brand-icon-wrapper">
+            <StethoscopeIcon size={22} />
+          </div>
+          <div className="brand-text">
+            <h2>Smart<span>Clinic</span></h2>
+            <span className="brand-tagline">Healthcare Portal</span>
+          </div>
+        </Link>
 
-      <div>
-        <a href="/">Home</a>
-        <a href="/doctors">Doctors</a>
-        <a href="/appointments">Appointments</a>
+        {/* MOBILE MENU TOGGLE */}
+        <button
+          className="menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
 
-        {isLoggedIn ? (
-          <>
-            <a href="/clinic-dashboard">Clinic Dashboard</a>
+        {/* NAV LINKS */}
+        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+            onClick={closeMenu}
+          >
+            Home
+          </NavLink>
 
-            <button onClick={handleLogout}>
-              Logout
-            </button>
-          </>
-        ) : (
-          <a href="/clinic-login">Clinic Login</a>
-        )}
+          <NavLink
+            to="/doctors"
+            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+            onClick={closeMenu}
+          >
+            Find Doctors
+          </NavLink>
+
+          <NavLink
+            to="/appointment"
+            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+            onClick={closeMenu}
+          >
+            Book Appointment
+          </NavLink>
+
+          <NavLink
+            to="/appointments"
+            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+            onClick={closeMenu}
+          >
+            My Appointments
+          </NavLink>
+
+          {/* LIVE OPD QUEUE LINK */}
+          <NavLink
+            to="/queue"
+            className={({ isActive }) => (isActive ? "nav-link live-queue-link active" : "nav-link live-queue-link")}
+            onClick={closeMenu}
+          >
+            <span className="live-ping-dot"></span>
+            <TvIcon size={16} />
+            <span>Live OPD Queue</span>
+          </NavLink>
+
+          {/* CLINIC STAFF CONTROLS */}
+          {isLoggedIn ? (
+            <div className="staff-nav-group">
+              <NavLink
+                to="/clinic-dashboard"
+                className={({ isActive }) => (isActive ? "nav-link staff-link active" : "nav-link staff-link")}
+                onClick={closeMenu}
+              >
+                Clinic Dashboard
+              </NavLink>
+
+              <button className="nav-logout-btn" onClick={handleLogout} title="Log out">
+                <LogOutIcon size={16} />
+                <span>Logout</span>
+              </button>
+            </div>
+          ) : (
+            <NavLink
+              to="/clinic-login"
+              className={({ isActive }) => (isActive ? "nav-login-btn active" : "nav-login-btn")}
+              onClick={closeMenu}
+            >
+              <LogInIcon size={16} />
+              <span>Clinic Login</span>
+            </NavLink>
+          )}
+        </div>
       </div>
     </nav>
   );

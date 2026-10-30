@@ -1,0 +1,352 @@
+.slip-modal {
+  max-width: 680px;
+}
+
+.slip-container {
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  font-size: 13px;
+  color: var(--gray-800);
+}
+
+.slip-clinic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.slip-brand {
+  display: flex;
+  gap: 12px;
+}
+
+.slip-logo-badge {
+  width: 44px;
+  height: 44px;
+  background: var(--primary-subtle);
+  color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.slip-brand h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+.slip-sub {
+  margin: 2px 0 4px;
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.slip-addr {
+  margin: 0;
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
+.slip-token-box {
+  background: var(--gray-50);
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 130px;
+}
+
+.slip-token-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gray-500);
+  letter-spacing: 1px;
+}
+
+.slip-token-val {
+  display: block;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 2px 0;
+}
+
+.slip-status-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.status-approved {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.status-pending {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-rejected {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+.slip-divider {
+  height: 1px;
+  background: var(--gray-200);
+  margin: 16px 0;
+}
+
+.slip-meta-row {
+  display: flex;
+  justify-content: space-between;
+  background: var(--gray-50);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.meta-lbl {
+  color: var(--gray-500);
+  margin-right: 6px;
+}
+
+.meta-val {
+  color: var(--gray-800);
+  font-weight: 600;
+}
+
+.mode-highlight {
+  background: var(--primary-subtle);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.slip-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.slip-card-section {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.slip-card-section h4 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 6px;
+}
+
+.info-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.info-line span:first-child {
+  color: var(--gray-500);
+}
+
+.date-time-highlight {
+  color: var(--primary);
+}
+
+.room-badge {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.slip-service-box {
+  background: #f8fafc;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slip-symptoms-text {
+  margin: 4px 0 0;
+  font-style: italic;
+  color: var(--gray-600);
+  font-size: 12px;
+}
+
+.price-tag {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--success-text);
+  background: var(--success-bg);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.slip-notes-box {
+  background: #eff6ff;
+  border-left: 3px solid var(--primary);
+  padding: 10px 14px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 16px;
+}
+
+.notes-lbl {
+  display: block;
+  font-weight: 700;
+  color: var(--primary-hover);
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.slip-notes-box p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--gray-800);
+}
+
+.slip-instructions {
+  background: var(--gray-50);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  font-size: 11px;
+  color: var(--gray-600);
+}
+
+.slip-instructions ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.slip-instructions li {
+  margin-bottom: 3px;
+}
+
+.slip-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px dashed var(--gray-300);
+}
+
+.slip-barcode {
+  font-family: monospace;
+}
+
+.barcode-bars {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--gray-800);
+}
+
+.slip-barcode span {
+  display: block;
+  font-size: 10px;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+
+.seal-text {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--success-text);
+  background: var(--success-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #a7f3d0;
+}
+
+.slip-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-print:hover {
+  background: var(--primary-hover);
+}
+
+.btn-close-modal {
+  padding: 10px 18px;
+  background: white;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-close-modal:hover {
+  background: var(--gray-100);
+}
+
+@media (max-width: 640px) {
+  .slip-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .slip-clinic-header {
+    flex-direction: column;
+  }
+  .slip-token-box {
+    width: 100%;
+  }
+}
+
